@@ -1,0 +1,273 @@
+:root {
+    /* Colores */
+    --color-fondo: #333;
+    --color-texto: #fff;
+    --color-hover: #555;
+    --color-aditional: #f7b0b0;
+
+    /* Tipografía */
+    --fuente-principal: Arial, sans-serif;
+    --tamaño-título: 2rem;
+    --tamaño-botón: 1rem;
+
+    /* Espaciado */
+    --padding-general: 20px;
+    --padding-main: 40px;
+    --gap-menu: 20px;
+    --espaciado-elementos: 20px;
+
+    /* Otros */
+    --radio-borde-img: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+}
+
+/* Encabezado y menú */
+header {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: var(--padding-general);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--gap-menu);
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    display: flex;
+    padding: var(--padding-main);
+}
+
+/* Sección izquierda */
+.info {
+    flex: 1;
+    padding-right: var(--espaciado-elementos);
+}
+
+.info h1 {
+    font-size: var(--tamaño-título);
+    margin-bottom: var(--espaciado-elementos);
+}
+
+.info p {
+    margin-bottom: var(--espaciado-elementos);
+    line-height: 1.5;
+}
+
+.info button {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: var(--tamaño-botón);
+}
+
+.info button:hover {
+    background-color: var(--color-hover);
+}
+
+/* Sección derecha */
+.foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto img {
+    max-width: 100%;
+    border-radius: var(--radio-borde-img);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    padding: var(--padding-general) 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.main_siteplan{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-menu);
+    padding: var(--padding-main);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.card {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    width: 300px;
+    padding: var(--padding-general);
+    border-radius: var(--radio-borde-img);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--espaciado-elementos);
+}
+
+.card-description {
+    margin-bottom: var(--espaciado-elementos);
+    line-height: 1.5;
+}
+
+.card button {
+    background-color: var(--color-hover);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: var(--tamaño-botón);
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+}
+.form-section {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: var(--padding-general);
+    border-radius: var(--radio-borde-img);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-section h2 {
+    text-align: center;
+    font-size: var(--tamaño-título);
+    margin-bottom: var(--espaciado-elementos);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-elementos);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-hover);
+}
+
+button {
+    background-color: var(--color-hover);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px;
+    font-size: var(--tamaño-botón);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+}
+
+@media (max-width: 600px) {
+    main{
+        font-size: 0.8em;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    header{
+        flex-direction: column;
+    }
+    #project-container{
+        align-items: center;
+    }
+
+}
+
+#project-container{
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#content{
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#errorDiv{
+    color: var(--color-aditional);
+    display: none; /* Oculto inicialmente */
+}
+
+#siteplan_bosquejo_main{
+flex-direction: column;
+text-align: start;
+}
+
+.primary {
+    background-color: var(--color-texto); /* Color Primario */
+    border: 1px solid var(--color-fondo);
+}
+.secondary {
+    background-color: var(--color-fondo); /* Color Secundario */
+    color: var(--color-texto); /* Cambia el color del texto para mejor legibilidad */
+}
+.third {
+    background-color: var(--color-hover); /* Tercer Color */
+    color: var(--color-texto); /* Cambia el color del texto para mejor legibilidad */
+}
+.aditional {
+    background-color: var(--color-aditional); /* Tercer Color */
+    color: var(--color-fondo); /* Cambia el color del texto para mejor legibilidad */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+    <script src="scripts/gracias.js" defer></script>
+    <meta 
+    name="description" 
+    content="WDD 131 - Dynamic Web Fundamentals. Mario Eduardo Garcia Salazar. This is the siteplan web page used to work as a root and help accomplish the asked tasks during the Web Fundamentals course as final projetct beena a web folder. This is the thank you html">
+    <meta name="author" content="Mario Eduardo Garcia Salazar">
+    <title>Thank You</title>
+    
+</head>
+<body>
+
+    <!-- Encabezado con el menú -->
+    <header>
+        <h1>Mi Portafolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="gracias_main">
+            <section class="thanks-section">
+                <h2>¡Gracias por tu mensaje, <span id="nombre"></span>!</h2>
+                <p>Nos pondremos en contacto contigo a través de <span id="correo"></span> lo antes posible.</p>
+                <p><strong>Tu mensaje:</strong></p>
+                <p id="mensaje"></p>
+                <button onclick="window.location.href='proyectos.html'">Volver a Proyectos</button>
+                <p><strong>Number of visites on this website: </strong> <span id="contadorVisitas">0</span></p>
+            </section>
+    </main>
+
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            Mario Eduardo Garcia Salazar, Hidalgo Mexico
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
+</body>
+</html>
